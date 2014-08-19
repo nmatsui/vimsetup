@@ -1,13 +1,14 @@
 vimsetup Cookbook
 =================
-This cookbook install vim with lua plugin etc.
+This cookbook install vim with lua plugin etc, and neobundle
+(https://github.com/Shougo/neobundle.vim)
 
 Requirements
 ------------
 
 #### packages
-- `vim
--  git
+- vim
+- git
 
 Attributes
 ----------
@@ -42,6 +43,18 @@ Attributes
 
 Usage
 -----
+
+#### vimsetup::default
+include `vimsetup` in your `run_list`:
+this recipe install vim with lua, ruby, python, perl plugins.
+
+#### vimsetup::neobundle
+include `vimsetup::neobundle` in your `run_list`:
+this recipe install neobundle in `node['vimsetup']['home']/.vim/bundle`
+
+#### vimsetup::alias
+include `vimsetup::alias` in your `run_list`:
+this recipe add `alias vi='vim'` in `node['vimsetup']['user']`'s .bashrc
 
 License and Authors
 -------------------
