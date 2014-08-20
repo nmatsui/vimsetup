@@ -29,7 +29,7 @@ end
 git NEOBUNDLE_DIR  do
   user USER
   group GROUP
-  repository "git://github.com/Shougo/neobundle.vim"
+  repository "https://github.com/Shougo/neobundle.vim"
   reference "master"
   action :sync
 end
