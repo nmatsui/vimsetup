@@ -4,6 +4,12 @@
 #
 # License:Apache License Version2
 #
+if platform_family? "rhel"
+  include_recipe "yum"
+else
+  include_recipe "apt"
+end
+
 
 node.set['vim']['install_method']='source'
 if platform_family? "rhel"
